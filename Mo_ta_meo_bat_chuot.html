@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Rat {
+        name;
+        weight;
+        speed;
+        health
+
+        constructor(name,weight) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = 10;
+            this.health = 100
+        }
+        getTalk() {
+            return alert("chít, chít")
+
+        }
+        hasBeenCatch() {
+            this.health -= 100
+
+        }
+        inFor() {
+            return 'Tên: ' + this.name + '; Sức khỏe: ' + this.health
+
+        }
+    }
+    class Cat {
+        name;
+        weight
+        maxSpeed;
+        health
+
+        constructor(name,weight,maxSpeed) {
+            this.name = name
+            this.weight = 10
+            this.health = 100;
+            this.maxSpeed = 100
+
+        }
+        getTalk () {
+            return alert("meo meo")
+        }
+        getCatchRat() {
+            this.maxSpeed -=10
+
+        }
+        getEatRat() {
+            this.weight += 10
+
+        }
+        inFor() {
+            return 'Tên: ' + this.name + '; cân nặng: ' + this.weight + ",Tốc độ còn lại " + this.maxSpeed
+
+        }
+
+    }
+    let meo = new Cat("Tom")
+    let chuot1 = new Rat('jerry1 ')
+    let chuot2 = new Rat('jerry2' )
+    let chuot3 = new Rat('jerry3' )
+    meo.getCatchRat()
+    chuot1.getTalk()
+    chuot1.hasBeenCatch()
+    meo.getCatchRat()
+    meo.getEatRat()
+    chuot2.hasBeenCatch()
+    meo.getCatchRat()
+    meo.getEatRat()
+    chuot3.hasBeenCatch()
+    meo.getTalk()
+    meo.getEatRat()
+
+    document.write(meo.inFor() + '<br>')
+    document.write(chuot1.inFor())
+
+
+</script>

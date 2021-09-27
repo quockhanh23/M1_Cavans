@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Apple {
+        weight
+        name
+
+        constructor(name) {
+            this.weight = 10
+            this.name = name
+        }
+
+        getHasBeenAttack() {
+            this.weight -= 1
+
+        }
+
+        inFor() {
+            return 'Tên: ' + this.name + '; khối lượng: ' + this.weight
+
+        }
+    }
+
+    class Human {
+        name;
+        gender;
+        weight
+
+        constructor(name, gender) {
+            this.weight = 10
+            this.name = name;
+            this.gender = gender;
+        }
+        getEatApple() {
+            this.weight +=1
+
+        }
+        inFor() {
+            return 'Tên: ' + this.name + '; khối lượng: ' + this.weight
+        }
+        getTalk() {
+            return alert("hey yo")
+
+        }
+        getCheckWeight () {
+            return this.weight
+        }
+    }
+    let adam = new Human('adam')
+    let eva = new Human('eva')
+    let apple = new Apple('apple')
+    apple.getHasBeenAttack()
+    adam.getEatApple()
+    eva.getEatApple()
+    document.write(adam.inFor() + "<br>")
+    document.write(apple.inFor())
+
+
+</script>

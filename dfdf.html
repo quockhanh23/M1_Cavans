@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="684px" height="384px" style="border:1px solid #a2a2a2;"></canvas>
+<p id="tinhToan"></p>
+</body>
+</html>
+<script>
+    class HinhChuNhat {
+        chieuDai;
+        chieuRong;
+
+        constructor(x, y, chieuDai, chieuRong) {
+            this.x = x;
+            this.y = y;
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+
+        tinhDienTich() {
+            return this.chieuDai * this.chieuRong;
+        }
+
+        tinhChuVi() {
+            return (this.chieuDai + this.chieuRong) * 2;
+        }
+
+        setChieuDai(dai) {
+            this.chieuDai = dai
+        }
+
+        setChieuRong(rong) {
+            this.chieuRong = rong
+        }
+
+        veHinh() {
+            let ctx = document.getElementById("myCanvas").getContext("2d");
+            ctx.fillStyle = "red";
+            ctx.fillRect(this.x, this.y, this.chieuDai, this.chieuRong);
+            ctx.fill();
+        }
+    }
+    for (i = 0; i<=10; i++) {
+        let hcn = new HinhChuNhat(50*Math.random(),50*Math.random(),60,60 )
+        hcn.veHinh()
+
+    }
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    class Battery {
+        energy;
+
+        constructor(energy) {
+            this.energy = 100
+        }
+        getLightOn () {
+            this.energy  -=10
+        }
+    }
+
+    class FlashLamp {
+        status;
+        battery;
+
+        constructor(status) {
+            this.status = status;
+            this.battery = 100
+        }
+
+        getLight() {
+            this.battery -= 10
+            if (this.battery < 0) {
+                alert("hết pin")
+            }
+        }
+        getTurnOn () {
+
+        }
+        getTurnOff () {
+
+        }
+        getBatteryInFor() {
+            return "Tình trạng pin: " + this.battery
+        }
+    }
+    let
+</script>

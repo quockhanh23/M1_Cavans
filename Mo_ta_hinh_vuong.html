@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200px" height="200px" style="border: crimson 1px solid"></canvas>
+</body>
+</html>
+<script>
+  class Hinhvuong {
+    canh;
+
+    constructor(canh) {
+      this.canh = canh
+    }
+
+    getTinhDienTich(canh) {
+      return canh * canh
+    }
+
+    getTinhChuVi(canh) {
+      return canh * 4;
+    }
+
+    veHinh() {
+      let c = document.getElementById('myCanvas');
+      let ctx = c.getContext('2d')
+      ctx.beginPath();
+      ctx.rect(100, 20, this.canh, this.canh);
+      ctx.stroke();
+    }
+
+    setCanh(canh) {
+      this.canh = canh
+    }
+
+  }
+
+  let hv = new Hinhvuong(100)
+  hv.veHinh()
+</script>

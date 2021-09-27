@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200px" height="200px" style="border: crimson 1px solid"></canvas>
+</body>
+</html>
+<script>
+  class HinhTron {
+      bankinh;
+      constructor(bankinh) {
+          this.bankinh = bankinh
+      }
+      getDienTich(bankinh) {
+          return  Math.PI * bankinh**2
+      }
+      getChuVi (bankinh) {
+          return Math.PI * bankinh*2
+      }
+      veHinh () {
+          let c = document.getElementById('myCanvas')
+          let ctx = c.getContext('2d')
+          ctx.beginPath()
+          ctx.arc(95,50,this.bankinh, 0,2*Math.PI);
+          ctx.strokeStyle = "green";
+          ctx.stroke();
+
+
+      }
+
+  }
+  let hinhTron = new HinhTron(50)
+  hinhTron.veHinh()
+</script>

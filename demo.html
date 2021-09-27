@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200px" height="200px" style="border: green solid"></canvas>
+</body>
+</html>
+<script>
+   let ctx = document.getElementById('myCanvas');
+   ctx = ctx.getContext('2d')
+   ctx.strokeStyle = "#a61d1d"
+   ctx.lineWidth = 3
+   ctx.moveTo(50,50)
+   ctx.lineTo(10,10)
+   ctx.stroke();
+</script>

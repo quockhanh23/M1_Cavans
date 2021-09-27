@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<img id="anh" src="100-Chi-c-B-n-Cung.jpg" alt="bia bắn tên" style="width: 300px; height: 300px">
+<canvas id="myCanvas" width="250" height="300" style="border: 1px solid #9d1414;"></canvas>
+<p>
+    <button onclick="myCanvas()">Thêm ảnh vào canvas</button>
+</p>
+</body>
+</html>
+<script>
+// hình tròn là tọa độ tâm
+    function myCanvas() {
+        let c = document.getElementById("myCanvas");
+        let ctx = c.getContext("2d");
+        let img = document.getElementById("anh");
+        ctx.drawImage(img, 0, 0, 250, 250); // tọa độ x y , chiều dài chiều rộng
+    }
+
+    // let c = document.getElementById('myCanvas');  // Vẽ hình vuông
+    // let ctx =  c.getContext('2d')
+    // ctx.fillStyle = "#FF0001"
+    // ctx.fillRect(50, 50, 25, 25)
+
+    // ctx.beginPath();              // Vẽ hình vuông
+    // ctx.moveTo(20, 20);
+    // ctx.lineTo(20, 100);
+    // ctx.lineTo(200, 100);
+    // ctx.lineTo(200, 20);
+    // ctx.lineTo(20, 20);
+    // ctx.strokeStyle = "red";
+    // ctx.stroke();
+
+
+// let c = document.getElementById('myCanvas');   //Vẽ đường thẳng
+    // let ctx = c.getContext ('2d')
+    // ctx.moveTo(0,0)
+    // ctx.lineTo(200,50)
+    // ctx.stroke()
+
+    // let c = document.getElementById("myCanvas");  // Vẽ hình tròn
+    // let ctx = c.getContext("2d");
+    // ctx.beginPath()
+    // ctx.arc(50,50,20,0,2*Math.PI)
+    // ctx.stroke();
+
+    // let c = document.getElementById("myCanvas");  //Chèn văn bản
+    // let ctx = c.getContext("2d");
+    // ctx.font ="30px Aria";
+    // ctx.fillText("Xin chào bạn",25,50);
+
+    // let c = document.getElementById("myCanvas");    //Chèn văn bản với chữ dạng đường nét
+    // let ctx = c.getContext("2d");
+    // ctx.font = "30px Arial";
+    // ctx.strokeText("Xin chào bạn",10,50);
+
+    // let c = document.getElementById("myCanvas"); //Vẽ hình với màu biến đổi tuyến tính (Linear Gradient)
+    // let ctx = c.getContext("2d");
+    // // Tạo gradient
+    // let grd = ctx.createLinearGradient(0,0,200,0);
+    // grd.addColorStop(0,"red");
+    // grd.addColorStop(1,"gray");
+    // // Gắn gradient
+    // ctx.fillStyle = grd;
+    // ctx.fillRect(10,10,150,80);
+
+
+    // let c = document.getElementById("myCanvas");    //Vẽ hình với màu biến đổi từ tâm (Radial Gradient)
+    // let ctx = c.getContext("2d");
+    //
+    // // Create gradient
+    // let grd = ctx.createRadialGradient(100,50,5,90,60,100);
+    // grd.addColorStop(0,"red");
+    // grd.addColorStop(1,"white");
+    //
+    // // Fill with gradient
+    // ctx.fillStyle = grd;
+    // ctx.fillRect(10,10,150,80);
+
+
+</script>
